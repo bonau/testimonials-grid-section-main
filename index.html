@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap"
+    rel="stylesheet">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
@@ -18,8 +21,11 @@
 
     body {
       background: hsl(210, 46%, 95%);
-      padding-left: 5vw;
-      padding-right: 5vw;
+      padding-left: 10vw;
+      padding-right: 10vw;
+      font-size: 13px;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+      color: hsl(217, 19%, 35%);
     }
 
     .container {
@@ -73,13 +79,33 @@
       flex-direction: column;
       flex: 1;
       background-color: white;
-      margin: 2em;
+      margin: 1em;
       padding: 1em;
       border-radius: 1em;
     }
 
+    article img {
+      width: 2em;
+      height: 2em;
+      border: 2px solid hsl(210, 46%, 95%);
+      border-radius: 1em;
+      margin-right: 0.7em;
+    }
+
     article author {
       display: block;
+    }
+
+    article .author-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+
+    article .text {
+      display: flex;
+      flex-direction: column;
     }
 
     .attribution {
@@ -98,9 +124,14 @@
   <div class="container">
     <div class="left">
       <div class="above">
-        <article style="flex: 2; background:hsl(228, 45%, 44%)">
-          <author>Daniel Clifford</author>
-          <position>Verified Graduate</position>
+        <article style="flex: 2; background:hsl(263, 55%, 52%); color: hsl(210, 46%, 95%);">
+          <div class="author-info">
+            <img src="images/image-daniel.jpg" />
+            <div class="text">
+              <author>Daniel Clifford</author>
+              <position>Verified Graduate</position>
+            </div>
+          </div>
 
           <summary>
             I received a job offer mid-course, and the subjects I learned were current, if not more so,
@@ -117,9 +148,14 @@
         </article>
 
 
-        <article style="flex: 1">
-          <author>Jonathan Walters</author>
-          <position>Verified Graduate</position>
+        <article style="flex: 1; background: hsl(217, 19%, 35%); color:hsl(210, 46%, 95%)">
+          <div class="author-info">
+            <img src="images/image-jonathan.jpg" />
+            <div class="text">
+              <author>Jonathan Walters</author>
+              <position>Verified Graduate</position>
+            </div>
+          </div>
 
           <summary>The team was very supportive and kept me motivated</summary>
 
@@ -131,8 +167,13 @@
       </div>
       <div class="below">
         <article style="flex: 1;">
-          <author>Jeanette Harmon</author>
-          <position>Verified Graduate</position>
+          <div class="author-info">
+            <img src="images/image-jeanette.jpg" />
+            <div class="text">
+              <author>Jeanette Harmon</author>
+              <position>Verified Graduate</position>
+            </div>
+          </div>
           <summary>An overall wonderful and rewarding experience</summary>
           <p>
             “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
@@ -140,9 +181,14 @@
           </p>
         </article>
 
-        <article style="flex: 2;">
-          <author>Patrick Abrams</author>
-          <position>Verified Graduate</position>
+        <article style="flex: 2; background: hsl(219, 29%, 14%); color: hsl(0, 0%, 81%)">
+          <div class="author-info">
+            <img src="images/image-patrick.jpg" />
+            <div class="text">
+              <author>Patrick Abrams</author>
+              <position>Verified Graduate</position>
+            </div>
+          </div>
           <summary>
             Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and
             learning from their experiences was easy.
@@ -159,8 +205,13 @@
 
     <div class="right">
       <article>
-        <author>Kira Whittle</author>
-        <position>Verified Graduate</position>
+        <div class="author-info">
+          <img src="images/image-kira.jpg" />
+          <div class="text">
+            <author>Kira Whittle</author>
+            <position>Verified Graduate</position>
+          </div>
+        </div>
         <summary>Such a life-changing experience. Highly recommended!</summary>
         <p>
           “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
